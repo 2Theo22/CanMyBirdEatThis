@@ -12,3 +12,4 @@ const db = new sqlite3.Database('./birdbase.sqlite', (err) => {
         console.log('Close the database connection.');
     });
 });
+
