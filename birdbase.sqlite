@@ -23,14 +23,69 @@ INSERT OR IGNORE INTO BirdGroup (GroupName) VALUES
 CREATE TABLE Food (
     FoodName VARCHAR(50) UNIQUE NOT NULL,
     Danger VARCHAR(20) NOT NULL
-        CHECK (Danger IN ('can eat', 'shouldn't eat', 'dangerous', 'NA')),
-    FoodID INTEGER PRIMARY KEY UNIQUE NOT NULL
+        CHECK (Danger IN ('can eat', 'should not eat', 'dangerous', 'NA')),
+    FoodID INTEGER PRIMARY KEY UNIQUE NOT NULL,
+    SmallPortionWarning VARCHAR(20)
+        CHECK (SmallPortionWarning IN ('Only small portions!')
 );
 
 INSERT OR IGNORE INTO Food (FoodName, Danger) VALUES
- ('rose hips', 'can eat'),
+
+ ('apple', 'can eat'),
+ ('apple seeds', 'dangerous'),
+ ('avocado', 'dangerous'),
+ ('apricot', 'can eat'),
+ ('apricot pit', 'dangerous'),
+
+
+ ('banana', 'can eat'),
+ ('blueberries', 'can't eat'),
+
+ ('cantaloupe', 'can eat'),
+ ('citrus', 'can eat', 'Only small portions!'),
+ ('cherries', 'can eat'),
+ ('Cherry pit', 'dangerous'),
+
+
+ ('dandelion greens', 'can eat'),
+
  ('elderberry', 'can eat'),
- ('sea buckthorn berries', 'can eat')
+
+ ('grapes', 'can eat'),
+
+ ('honeydew', 'can eat'),
+
+ ('kiwi', 'can eat'),
+
+ ('lemon', 'can eat', 'Only small portions!'),
+ ('lime', 'can eat', 'Only small portions!'),
+
+ ('mango', 'can eat'),
+
+ ('orange', 'can eat', 'Only small portions!'),
+
+ ('potatoes', 'should not eat'),
+ ('papaya', 'can eat'),
+ ('pineapple', 'can eat'),
+ ('pomegranate', 'can eat'),
+ ('peach', 'can eat'),
+ ('peach pit', 'dangerous'),
+ ('plum', 'can eat'),
+ ('plum pit', 'dangerous'),
+ ('pear', 'can eat'),
+ ('pear seed', 'dangerous'),
+
+
+ ('raisins', 'dangerous'),
+ ('raspberries', 'can eat'),
+ ('rose hips', 'can eat'),
+
+ ('sea buckthorn berries', 'can eat'),
+ ('strawberries', 'can eat'),
+
+ ('turkey', 'should not eat'),
+
+ ('watermelon', 'can eat')
 ;
 
 
