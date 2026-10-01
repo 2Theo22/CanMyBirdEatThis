@@ -21,11 +21,17 @@ INSERT OR IGNORE INTO BirdGroup (GroupName) VALUES
     ('Lories/Lorikeets');
 
 CREATE TABLE Food (
-    Food VARCHAR(50) UNIQUE NOT NULL,
+    FoodName VARCHAR(50) UNIQUE NOT NULL,
     Danger VARCHAR(20) NOT NULL
         CHECK (Danger IN ('can eat', 'shouldn't eat', 'dangerous', 'NA')),
     FoodID INTEGER PRIMARY KEY UNIQUE NOT NULL
 );
+
+INSERT OR IGNORE INTO Food (FoodName, Danger) VALUES
+ ('rose hips', 'can eat'),
+ ('elderberry', 'can eat'),
+ ('sea buckthorn berries', 'can eat')
+;
 
 
 
