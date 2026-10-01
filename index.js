@@ -1,8 +1,9 @@
 
 
 
-const buttons = document.getElementById("button");
 
-buttons.onclick() = function {
-    console.log("Button");
+
+document.getElementById("button").onclick = function() {
+    let input = document.getElementById("input").value;
+    console.log(input);
 }
