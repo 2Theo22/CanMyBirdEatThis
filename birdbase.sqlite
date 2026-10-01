@@ -1,7 +1,24 @@
-CREATE TABLE BirdType (
-    Type VARCHAR (50) UNIQUE NOT NULL,
+CREATE TABLE IF NOT EXISTS BirdGroup (
+    GroupName VARCHAR (50) UNIQUE NOT NULL,
     TypeID INTEGER PRIMARY KEY UNIQUE NOT NULL
 );
+
+INSERT OR IGNORE INTO BirdGroup (GroupName) VALUES
+    ('Large Parrots'),
+    ('Medium Parrots'),
+    ('Small Parrots'),
+    ('True Finches'),
+    ('Estrildid Finches'),
+    ('Insectivores'),
+    ('Frugivores'),
+    ('Nectarivores'),
+    ('Pigeons & Doves'),
+    ('Birds of Prey'),
+    ('Poultry / Fowl'),
+    ('Waterfowl'),
+    ('Ratites'),
+    ('Penguins'),
+    ('Lories/Lorikeets');
 
 CREATE TABLE Food (
     Food VARCHAR(50) UNIQUE NOT NULL,
@@ -9,4 +26,6 @@ CREATE TABLE Food (
         CHECK (Danger IN ('can eat', 'shouldn't eat', 'dangerous', 'NA')),
     FoodID INTEGER PRIMARY KEY UNIQUE NOT NULL
 );
+
+
 
