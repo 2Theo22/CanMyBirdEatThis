@@ -26,13 +26,13 @@ CREATE TABLE Food (
         CHECK (Danger IN ('can eat', 'should not eat', 'dangerous', 'NA')),
     FoodID INTEGER PRIMARY KEY UNIQUE NOT NULL,
     SmallPortionWarning VARCHAR(20)
-        CHECK (SmallPortionWarning IN ('Only small portions!'),
+        CHECK (SmallPortionWarning IN ('Only small portions!')),
     Safety level VARCHAR(10) NOT NULL
         CHECK (Safety in ('Safe', 'Ok', 'Unsafe', 'NA')),
-    FoodType VARCHAR (20)
-        CHECK (FoodType in ('Vegetable', 'Fruits', 'Flowers/Plants', 'Meat', 'Nuts'),
+    Type VARCHAR (20)
+        CHECK (FoodType in ('Vegetable', 'Fruits', 'Flowers/Plants', 'Meat', 'Nuts', 'smell/air')),
     CertainDeadWarning VARCHAR(20)
-        CHECK (CertainDeadWarning in ('Certain Dead!')
+        CHECK (CertainDeadWarning in ('Deadly'))
 );
 
 INSERT OR IGNORE INTO Food (FoodName, Danger) VALUES
@@ -48,7 +48,12 @@ INSERT OR IGNORE INTO Food (FoodName, Danger) VALUES
  ('african violet', 'can eat'),
  ('areca palm', 'can eat'),
  ('aubergine','can eat', 'Only small portions!'),
-
+ ('aerosol sprays', 'dangerous'),
+ ('Avocado', 'dangerous', 'deadly'),
+ ('alcohol', 'dangerous', 'deadly'),
+ ('air fresheners', 'dangerous'),
+ ('avocado plant', 'dangerous', 'deadly'),
+ ('azalea', 'dangerous', 'deadly'),
 
  ('banana', 'can eat'),
  ('blueberries', 'can't eat'),
@@ -61,8 +66,9 @@ INSERT OR IGNORE INTO Food (FoodName, Danger) VALUES
  ('bok choy', 'can eat'),
  ('brown rice', 'can eat'),
  ('barley', 'can eat'),
- ('boston fern', 'can eat')
+ ('boston fern', 'can eat'),
  ('butter' ,'can eat', 'Only small portions!'),
+ ('baked goods', 'dangerous', 'deadly'),
 
 
  ('cantaloupe', 'can eat'),
@@ -86,21 +92,40 @@ INSERT OR IGNORE INTO Food (FoodName, Danger) VALUES
  ('cooked cashews', 'can eat'),
  ('chickpeas beans (uncooked)', 'dangerous'),
  ('Cashews (uncooked)', 'dangerous'),
+ ('chives', 'dangerous', 'deadly'),
+ ('caffeine', 'dangerous'),
+ ('cleaners', 'dangerous'),
+ ('chocolate', 'dangerous', 'deadly'),
+ ('coffee', 'dangerous', 'deadly'),
+ ('castor bean plant', 'dangerous', 'deadly'),
 
 
  ('dandelion greens', 'can eat'),
+ ('devils ivy', 'dangerous'),
+ ('dieffenbachia', 'dangerous'),
+ ('dumb cane', 'dangerous'),
+ ('daffodil bulbs', 'dangerous'),
 
  ('elderberry', 'can eat'),
  ('eggplant' ,'can eat', 'Only small portions!'),
+ ('english ivy', 'dangerous'),
+
+ ('fried food', 'dangerous'),
+ ('deep-fried food', 'dangerous'),
+ ('french fries', 'dangerous'),
+ ('foxglove', 'dangerous', 'deadly'),
 
  ('grapes', 'can eat'),
  ('green beans', 'can eat'),
+ ('garlic', 'dangerous'),
 
  ('honeydew', 'can eat'),
  ('hot peppers', 'can eat'),
  ('hard-boiled egg', 'can eat'),
  ('Hibiscus', 'can eat'),
- ('hard cheese', ,'can eat', 'Only small portions!'),
+ ('hard cheese' ,'can eat', 'Only small portions!'),
+ ('holly berries', 'dangerous'),
+ ('hairspray', 'dangerous'),
 
  ('iceberg lettuce','can eat', 'Only small portions!'),
 
@@ -112,15 +137,24 @@ INSERT OR IGNORE INTO Food (FoodName, Danger) VALUES
  ('leafy lettuce', 'can eat'),
  ('lentils beans (uncooked)', 'dangerous'),
  ('kidney beans (uncooked)', 'dangerous'),
+ ('leeks', 'dangerous'),
+ ('lily (most species)', 'dangerous'),
+ ('lily of the valley', 'dangerous', 'deadly'),
 
  ('mango', 'can eat'),
  ('millet', 'can eat'),
  ('marigold', 'can eat'),
  ('mushrooms' ,'can eat', 'Only small portions!'),
+ ('milk', 'dangerous'),
+ ('mistletoe', 'dangerous'),
+
+ ('non-stick cookware', 'dangerous', 'deadly'),
 
  ('orange', 'can eat', 'Only small portions!'),
  ('oats', 'can eat'),
  ('oatmeal', 'can eat'),
+ ('onion', 'dangerous'),
+ ('oleander', 'dangerous', 'deadly'),
 
  ('potatoes', 'should not eat'),
  ('papaya', 'can eat'),
@@ -137,7 +171,10 @@ INSERT OR IGNORE INTO Food (FoodName, Danger) VALUES
  ('peas', 'can eat'),
  ('pecans', 'can eat'),
  ('pine nuts', 'can eat', 'Only small portions!'),
- ('peanuts (in shell)', ,'can eat', 'Only small portions!'),
+ ('peanuts (in shell)', 'can eat', 'Only small portions!'),
+ ('philodendron', 'dangerous'),
+ ('pothos', 'dangerous'),
+ ('perfume', 'dangerous'),
 
  ('quinoa', 'can eat'),
 
@@ -146,25 +183,42 @@ INSERT OR IGNORE INTO Food (FoodName, Danger) VALUES
  ('rose hips', 'can eat'),
  ('romaine lettuce', 'can eat'),
  ('roses', 'can eat'),
+ ('raw beans', 'dangerous'),
+ ('rhubarb (leaves)', 'dangerous', 'deadly'),
+ ('rhododendron', 'dangerous', 'deadly'),
 
  ('sea buckthorn berries', 'can eat'),
  ('strawberries', 'can eat'),
  ('sweet potato', 'can eat'),
  ('spagetthi', 'can eat', 'Only small portions!'),
+ ('salted nuts (any)', 'dangerous'),
  ('salted walnuts', 'should not eat'),
  ('salted pecans', 'should not eat'),
  ('spider plant', 'can eat'),
- ('sunflower', 'can eat')
- ('spinach', 'can eat' 'only small portions!')
+ ('sunflower', 'can eat'),
+ ('spinach', 'can eat' 'only small portions!'),
  ('swiss chard', ,'can eat', 'Only small portions!'),
  ('sunflower seeds', ,'can eat', 'Only small portions!'),
  ('sugary candy','should not eat'),
  ('sweets', 'should not eat'),
+ ('scallions', 'dangerous'),
+ ('salt', 'dangerous'),
+ ('salty foods', 'dangerous'),
+ ('sodium', 'dangerous'),
+ ('scented candles', 'dangerous'),
+ ('sugar subsitute', 'dangerous', 'deadly'),
+ ('sugar free gum', 'dangerous', 'deadly'),
+ ('sago palm', 'dangerous', 'deadly'),
+
 
  ('turkey', 'should not eat'),
  ('tofu (plain)', 'can eat', 'Only small portions!'),
  ('tomato (fruit only' ,'can eat', 'Only small portions!'),
  ('tomato leaves', 'dangerous'),
+ ('tea (caffeinated)', 'dangerous'),
+ ('tulip bulbs', 'dangerous'),
+ ('tobacco smoke', 'dangerous'),
+ ('teflon', 'dangerous', 'deadly'),
 
  ('watermelon', 'can eat'),
  ('whole-wheat pasta', 'can eat'),
@@ -173,7 +227,9 @@ INSERT OR IGNORE INTO Food (FoodName, Danger) VALUES
  ('whole-grain bread','can eat', 'Only small portions!'),
 
  ('yoghurt (plain)' ,'can eat', 'Only small portions!'),
+ ('yew', 'dangerous', 'deadly'),
 
+ ('xylitol', 'dangerous', 'deadly'),
 
  ('zucchini', 'can eat')
 ;
