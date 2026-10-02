@@ -1,0 +1,182 @@
+CREATE TABLE IF NOT EXISTS BirdGroup (
+    GroupName VARCHAR (50) UNIQUE NOT NULL,
+    TypeID INTEGER PRIMARY KEY UNIQUE NOT NULL
+);
+
+INSERT OR IGNORE INTO BirdGroup (GroupName) VALUES
+    ('Large Parrots'),
+    ('Medium Parrots'),
+    ('Small Parrots'),
+    ('True Finches'),
+    ('Estrildid Finches'),
+    ('Insectivores'),
+    ('Frugivores'),
+    ('Nectarivores'),
+    ('Pigeons & Doves'),
+    ('Birds of Prey'),
+    ('Poultry / Fowl'),
+    ('Waterfowl'),
+    ('Ratites'),
+    ('Penguins'),
+    ('Lories/Lorikeets');
+
+CREATE TABLE Food (
+    FoodName VARCHAR(50) UNIQUE NOT NULL,
+    Danger VARCHAR(20) NOT NULL
+        CHECK (Danger IN ('can eat', 'should not eat', 'dangerous', 'NA')),
+    FoodID INTEGER PRIMARY KEY UNIQUE NOT NULL,
+    SmallPortionWarning VARCHAR(20)
+        CHECK (SmallPortionWarning IN ('Only small portions!'),
+    Safety level VARCHAR(10) NOT NULL
+        CHECK (Safety in ('Safe', 'Ok', 'Unsafe', 'NA')),
+    FoodType VARCHAR (20)
+        CHECK (FoodType in ('Vegetable', 'Fruits', 'Flowers/Plants', 'Meat', 'Nuts'),
+    CertainDeadWarning VARCHAR(20)
+        CHECK (CertainDeadWarning in ('Certain Dead!')
+);
+
+INSERT OR IGNORE INTO Food (FoodName, Danger) VALUES
+
+ ('apple', 'can eat'),
+ ('apple seeds', 'dangerous'),
+ ('avocado', 'dangerous'),
+ ('apricot', 'can eat'),
+ ('apricot pit', 'dangerous'),
+ ('acorn squash', 'can eat'),
+ ('acorn squash seeds', 'can eat', 'Only small portions'),
+ ('Almonds', 'Only small portions'),
+ ('african violet', 'can eat'),
+ ('areca palm', 'can eat'),
+ ('aubergine','can eat', 'Only small portions!'),
+
+
+ ('banana', 'can eat'),
+ ('blueberries', 'can't eat'),
+ ('broccoli', 'can eat'),
+ ('bell peppers (all colours)', 'can eat'),
+ ('butternut', 'can eat'),
+ ('butternut seed', 'can eat', 'Only small portions!'),
+ ('beets', 'can eat'),
+ ('brussels sprouts', 'can eat'),
+ ('bok choy', 'can eat'),
+ ('brown rice', 'can eat'),
+ ('barley', 'can eat'),
+ ('boston fern', 'can eat')
+ ('butter' ,'can eat', 'Only small portions!'),
+
+
+ ('cantaloupe', 'can eat'),
+ ('citrus', 'can eat', 'Only small portions!'),
+ ('cherries', 'can eat'),
+ ('cherry pit', 'dangerous'),
+ ('carrots', 'can eat'),
+ ('cauliflower', 'can eat'),
+ ('chili pepper', 'can eat'),
+ ('courgette', 'can eat'),
+ ('cucumber', 'can eat'),
+ ('corn', 'can eat'),
+ ('cabbage', 'can eat'),
+ ('couscous', 'can eat'),
+ ('cooked chicken (plain)', 'can eat'),
+ ('cooked turkey (plain)', 'can eat'),
+ ('cooked fish (plain)', 'can eat'),
+ ('cooked lentils beans', 'can eat'),
+ ('cooked chickpeas beans', 'can eat'),
+ ('cooked kidney beans', 'can eat'),
+ ('cooked cashews', 'can eat'),
+ ('chickpeas beans (uncooked)', 'dangerous'),
+ ('Cashews (uncooked)', 'dangerous'),
+
+
+ ('dandelion greens', 'can eat'),
+
+ ('elderberry', 'can eat'),
+ ('eggplant' ,'can eat', 'Only small portions!'),
+
+ ('grapes', 'can eat'),
+ ('green beans', 'can eat'),
+
+ ('honeydew', 'can eat'),
+ ('hot peppers', 'can eat'),
+ ('hard-boiled egg', 'can eat'),
+ ('Hibiscus', 'can eat'),
+ ('hard cheese', ,'can eat', 'Only small portions!'),
+
+ ('iceberg lettuce','can eat', 'Only small portions!'),
+
+ ('kiwi', 'can eat'),
+ ('kale', 'can eat'),
+
+ ('lemon', 'can eat','can eat', 'Only small portions!'),
+ ('lime', 'can eat', 'can eat', 'Only small portions!'),
+ ('leafy lettuce', 'can eat'),
+ ('lentils beans (uncooked)', 'dangerous'),
+ ('kidney beans (uncooked)', 'dangerous'),
+
+ ('mango', 'can eat'),
+ ('millet', 'can eat'),
+ ('marigold', 'can eat'),
+ ('mushrooms' ,'can eat', 'Only small portions!'),
+
+ ('orange', 'can eat', 'Only small portions!'),
+ ('oats', 'can eat'),
+ ('oatmeal', 'can eat'),
+
+ ('potatoes', 'should not eat'),
+ ('papaya', 'can eat'),
+ ('pineapple', 'can eat'),
+ ('pomegranate', 'can eat'),
+ ('peach', 'can eat'),
+ ('peach pit', 'dangerous'),
+ ('plum', 'can eat'),
+ ('plum pit', 'dangerous'),
+ ('pear', 'can eat'),
+ ('pear seed', 'dangerous'),
+ ('pumpkin', 'can eat'),
+ ('pumpkin seed', 'can eat', 'Only small portions!'),
+ ('peas', 'can eat'),
+ ('pecans', 'can eat'),
+ ('pine nuts', 'can eat', 'Only small portions!'),
+ ('peanuts (in shell)', ,'can eat', 'Only small portions!'),
+
+ ('quinoa', 'can eat'),
+
+ ('raisins', 'dangerous'),
+ ('raspberries', 'can eat'),
+ ('rose hips', 'can eat'),
+ ('romaine lettuce', 'can eat'),
+ ('roses', 'can eat'),
+
+ ('sea buckthorn berries', 'can eat'),
+ ('strawberries', 'can eat'),
+ ('sweet potato', 'can eat'),
+ ('spagetthi', 'can eat', 'Only small portions!'),
+ ('salted walnuts', 'should not eat'),
+ ('salted pecans', 'should not eat'),
+ ('spider plant', 'can eat'),
+ ('sunflower', 'can eat')
+ ('spinach', 'can eat' 'only small portions!')
+ ('swiss chard', ,'can eat', 'Only small portions!'),
+ ('sunflower seeds', ,'can eat', 'Only small portions!'),
+ ('sugary candy','should not eat'),
+ ('sweets', 'should not eat'),
+
+ ('turkey', 'should not eat'),
+ ('tofu (plain)', 'can eat', 'Only small portions!'),
+ ('tomato (fruit only' ,'can eat', 'Only small portions!'),
+ ('tomato leaves', 'dangerous'),
+
+ ('watermelon', 'can eat'),
+ ('whole-wheat pasta', 'can eat'),
+ ('white rice', 'can eat'),
+ ('walnuts', 'can eat', 'Only small portions!'),
+ ('whole-grain bread','can eat', 'Only small portions!'),
+
+ ('yoghurt (plain)' ,'can eat', 'Only small portions!'),
+
+
+ ('zucchini', 'can eat')
+;
+
+
+
