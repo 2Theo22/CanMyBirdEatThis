@@ -1,6 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
 
-const db = new sqlite3.Database('./birdbase.sqli', (err) => {
+const db = new sqlite3.Database('./birdbase.db', (err) => {
     if (err) {
         console.error('Fehler beim Öffnen:', err.message);
         return;

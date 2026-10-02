@@ -1,3 +1,4 @@
+let body;
 
 document.getElementById("button").onclick = function() {
     let input = document.getElementById("input").value;
@@ -26,9 +27,11 @@ function foodTypeLayoutHandler(){
 }
 
 function greenlayout(){
-    console.log("we work");
+    document.getElementById("line1").innerHTML =
+        "<h2>Your food is safe!</h2>";
 }
 
 function redlayout(){
-    console.log("We work too");
+    document.getElementById("line1").innerHTML =
+        "<h2>Your food is <strong>NOT</strong> safe!</h2>";
 }
