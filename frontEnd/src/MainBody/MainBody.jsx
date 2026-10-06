@@ -3,7 +3,6 @@ import defaultImg from '../assets/IMG_8967.jpeg'
 
 
 function MainBody() {
-
     return(
         <>
             <div className="main">
