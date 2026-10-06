@@ -1,6 +1,5 @@
-
-
-
+import './mainbody.css'
+import defaultImg from '../assets/IMG_8967.jpeg'
 
 
 function MainBody() {
@@ -16,7 +15,7 @@ function MainBody() {
 
                 </div>
                 <div className="rightSide">
-                    <img id="samplePic" src="assets/IMG_8967.jpeg"/>
+                    <img id="samplePic" src={defaultImg}/>
                 </div>
             </div>
 
