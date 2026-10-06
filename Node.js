@@ -1,4 +1,8 @@
+
+
 const sqlite3 = require('sqlite3').verbose();
+
+
 
 const db = new sqlite3.Database('./birdbase.db', (err) => {
     if (err) {
@@ -7,7 +11,7 @@ const db = new sqlite3.Database('./birdbase.db', (err) => {
     }
     console.log('Connected to the database.');
 
-    db.all('SELECT * FROM Food', (err, rows) => {
+    db.all('SELECT ${input} FROM Food', (err, rows) => {
         if (err) {
             console.error('Query-Fehler:', err.message);
         } else {
