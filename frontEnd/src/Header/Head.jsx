@@ -17,6 +17,12 @@ function Head() {
             console.log(0);
         }
     }
+
+    const deletePls = (e) => {
+        e.preventDefault();
+        console.log("DeleteX has been clicked");
+        setInput(" ");
+    }
     return(
     <>
         <div className="header">
@@ -37,7 +43,9 @@ function Head() {
                         setInput (e.target.value)
                     }
                 />
-                <a id="deleteText"><img id="deleteX" src={deleteX}/></a>
+                <a id="deleteText" onClick = {deletePls}>
+                    <img id="deleteX" src={deleteX}/>
+                </a>
             </div>
         </div>
     </>
