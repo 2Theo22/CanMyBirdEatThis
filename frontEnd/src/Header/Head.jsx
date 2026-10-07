@@ -4,17 +4,38 @@ import magglass from '../assets/magnifying-glass-solid.png'
 import deleteX from '../assets/x-solid.png'
 
 function Head() {
-    const [textInput, setInput] = useState("");
+    let [inputString, setInput] = useState("");
+
+    const click = (e) => {
+        e.preventDefault();
+        inputString = input.value;
+
+        if(inputString !== ""){
+            console.log(inputString);
+        }
+        else{
+            console.log(0);
+        }
+    }
     return(
     <>
         <div className="header">
             <div className="searchbar">
-                <button id="button"><img id="magGlass" src={magglass}/></button>
+                <button id="button">
+                    <img id="magGlass"
+                         src={magglass}
+                         onClick = {click}
+                    />
+                </button>
                 <input
                     type="text"
                     id="input"
                     placeholder="Banana"
-                    value={textInput}
+                    value = {inputString}
+                    onChange={
+                    (e) =>
+                        setInput (e.target.value)
+                    }
                 />
                 <a id="deleteText"><img id="deleteX" src={deleteX}/></a>
             </div>
