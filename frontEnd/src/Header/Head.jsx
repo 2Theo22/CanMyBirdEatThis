@@ -10,12 +10,6 @@ function Head() {
         e.preventDefault();
         inputString = input.value;
 
-        if(inputString !== ""){
-            console.log(inputString);
-        }
-        else{
-            console.log(0);
-        }
     }
 
     const deletePls = (e) => {
