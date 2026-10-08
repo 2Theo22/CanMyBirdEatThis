@@ -3,12 +3,12 @@ import './header.css'
 import magglass from '../assets/magnifying-glass-solid.png'
 import deleteX from '../assets/x-solid.png'
 
-function Head() {
+function Head({ onSearchChange}) {
     let [inputString, setInput] = useState("");
 
     const click = (e) => {
         e.preventDefault();
-        inputString = input.value;
+        onSearchChange(inputString);
 
     }
 
@@ -21,10 +21,10 @@ function Head() {
     <>
         <div className="header">
             <div className="searchbar">
-                <button id="button">
+                <button id="button" onClick = {click}>
                     <img id="magGlass"
                          src={magglass}
-                         onClick = {click}
+
                     />
                 </button>
                 <input
