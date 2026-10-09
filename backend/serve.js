@@ -14,7 +14,7 @@ const db = new sqlite3.Database('./db/birdbase.db',
 
                                         );
 db.all(
-    "SELECT * FROM Food WHERE FoodName = ?",
+    "SELECT * FROM Food WHERE FoodName = ? COLLATE NOCASE",
     [input],
     (err, rows) => {
         if (err) {
