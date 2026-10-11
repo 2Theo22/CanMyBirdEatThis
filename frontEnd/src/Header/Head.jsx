@@ -17,9 +17,11 @@ function Head({ onSearchChange}) {
         console.log("DeleteX has been clicked");
         setInput(" ");
     }
+
     return(
     <>
         <div className="header">
+            <form>
             <div className="searchbar">
                 <button id="button" onClick = {click}>
                     <img id="magGlass"
@@ -41,6 +43,7 @@ function Head({ onSearchChange}) {
                     <img id="deleteX" src={deleteX}/>
                 </a>
             </div>
+            </form>
         </div>
     </>
 )
