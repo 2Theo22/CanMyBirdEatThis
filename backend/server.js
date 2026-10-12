@@ -30,6 +30,7 @@ app.get('/api/search', async (req, res) => {
                  WHERE BirdGroupFood.FoodID = ?`,
                 [food.FoodID]
             );
+
             for (const group of groups) {
                 group.images = await all(
                     'SELECT ImageURL, Credit FROM BirdImage WHERE TypeID = ? ORDER BY SortOrder',
