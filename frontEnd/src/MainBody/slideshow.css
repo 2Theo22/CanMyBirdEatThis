@@ -1,0 +1,16 @@
+.slideshow {
+    position: relative;
+}
+
+
+.slideBtn.left, .slideCount,.slideBtn.right   {
+    visibility: hidden;
+}
+
+
+#samplePic{
+    height: auto;
+    width: 30vw;
+    border-radius: 20px;
+    object-fit: cover;
+}
