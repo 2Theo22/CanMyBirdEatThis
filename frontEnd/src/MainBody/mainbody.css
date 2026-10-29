@@ -30,6 +30,7 @@
     width: 45vw;
     height: 80vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0;

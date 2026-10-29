@@ -93,10 +93,6 @@ function MainBody({ results }) {
                                 <p>Type</p>
                                 <p>{food?.Type ?? "-"}</p>
                             </div>
-                            <div className="smallFrame">
-                                <p>Image Credit:</p>
-                                <p>{imageCredit ?? "-"}</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -114,6 +110,10 @@ function MainBody({ results }) {
                                 <div className="slideCount">{index + 1} / {images.length}</div>
                             </>
                         )}
+                    </div>
+                    <div className="creditFrame">
+                        <p>Image Credit:</p>
+                        <p>{imageCredit ?? "-"}</p>
                     </div>
                 </div>
             </div>
