@@ -2,6 +2,8 @@
 ## Description
 This site helps you find out if something is safe for your bird
 
+Please note that this is not a finished project and may not display well on all screen sizes!
+
 ## Languages
 - React: Logic
 - CSS: Design
