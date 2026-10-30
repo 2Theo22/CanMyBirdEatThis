@@ -1,8 +1,9 @@
 .main{
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
+    overflow-y: auto
 }
 
 .leftSide{
@@ -34,7 +35,7 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-
+    flex-wrap: wrap;
 }
 
 
@@ -62,6 +63,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 
@@ -70,6 +72,7 @@
     width: 100%;
     height: 30vw;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -78,6 +81,7 @@
 .row{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .smallFrame{
@@ -94,3 +98,4 @@
 .recommeded{
     height: 300px;
 }
+

@@ -10,14 +10,14 @@
 
 #samplePic{
     height: auto;
-    max-height:65vh;
-    width: 30vw;
+    max-height:65%;
+    width: 90%;
     border-radius: 20px;
     object-fit: cover;
 }
 
 .creditFrame{
-    width: 25vw;
+    width: 90%;
     height: auto;
     max-height: 15vh;
     border: 3px solid black;
@@ -25,5 +25,4 @@
     border-radius: 20px;
     color: white;
     box-shadow: 5px 5px #f35e08;
-
 }
