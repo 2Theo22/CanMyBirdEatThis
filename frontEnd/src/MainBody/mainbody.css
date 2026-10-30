@@ -17,12 +17,12 @@
 .NiceBeautifulFrame{
     height: 45%;
     width: 65%;
+    box-shadow: 10px 10px #f35e08;
 }
 
 .NiceBeautifulFrame, .smallFrame{
     border: 3px solid black;
     background-color: #e99d62;
-    box-shadow: 10px 10px #f35e08;
     border-radius: 20px;
 }
 
@@ -70,7 +70,7 @@
     width: 100%;
     height: 30vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -84,4 +84,13 @@
     width: 150px;
     height: 150px;
     margin: 10px;
+    justify-content: safe center;
+    color: white;
+    overflow-y: auto;
+    padding: 2px 2px 0 2px;
+    box-shadow: 5px 5px #f35e08;
+}
+
+.recommeded{
+    height: 300px;
 }

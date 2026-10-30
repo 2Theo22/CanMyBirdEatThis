@@ -76,19 +76,19 @@ function MainBody({ results }) {
                         </div>
                     </div>
                     <div className="lowerpart">
-                        <div className="row">
-                            <div className="smallFrame">
+                        <div className="line">
+                            <div className="smallFrame recommeded">
                                 <p>{dangerorRecommended}</p>
                                 <p>{BirdListOrDangerWarning}</p>
                             </div>
+                        </div>
+                        <div className="line">
                             <div className="smallFrame">
                                 <p>Danger level</p>
                                 <p>{dangerLevel}</p>
                                 {food?.SmallPortionWarning && <p>{food.SmallPortionWarning}</p>}
                                 {food?.CertainDeadWarn && <p>{food.CertainDeadWarn}</p>}
                             </div>
-                        </div>
-                        <div className="row">
                             <div className="smallFrame">
                                 <p>Type</p>
                                 <p>{food?.Type ?? "-"}</p>
@@ -113,7 +113,7 @@ function MainBody({ results }) {
                     </div>
                     <div className="creditFrame">
                         <p>Image Credit:</p>
-                        <p>{imageCredit ?? "-"}</p>
+                        <p>{imageCredit ?? "Me. Those are my caiques"}</p>
                     </div>
                 </div>
             </div>
