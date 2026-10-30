@@ -26,3 +26,5 @@ Do not close that Terminal Window!
 
 
 ## Preview
+<img src="./assets/Preview1">
+<img src="./assets/preview2.png">
